@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos, Sidebar } from "./";
@@ -21,7 +21,7 @@ const Feed = () => {
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       </Box>
 
-      <Box p={2} sx={{ overflowY: "auto", flex: 2 }}>
+      <Box px={2}  sx={{ overflowY: "auto", flex: 2 }}>
         <Videos videos={videos} />
       </Box>
     </Stack>

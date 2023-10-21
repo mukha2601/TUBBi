@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Typography, Box } from "@mui/material";
 import { useParams } from "react-router-dom";
+import {colors} from '../utils/colors'
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos } from "./";
@@ -16,8 +17,8 @@ const SearchFeed = () => {
 
   return (
     <Box p={2} minHeight="95vh">
-      <Typography variant="h4" fontWeight={900}  color="white" mb={3} >
-        Search Results for <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
+      <Typography variant="h4" fontWeight={900}  color={colors.white} mb={3} >
+        Search Results for <span style={{ color: colors.primary }}>{searchTerm}</span> videos
       </Typography>
       <Box display="flex">
         {<Videos videos={videos} />}

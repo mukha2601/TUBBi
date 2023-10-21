@@ -21,14 +21,13 @@ const SearchBar = () => {
       component='form'
       onSubmit={onhandleSubmit}
       sx={{
-        border: '1px solid #e3e3e3',
         pl: 2,
         boxShadow: 'none',
       }}
     >
       <input
         className='search-bar'
-        placeholder='Search...'
+        placeholder='search...'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

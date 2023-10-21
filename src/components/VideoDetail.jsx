@@ -26,10 +26,10 @@ const VideoDetail = () => {
   const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;
 
   return (
-    <Box minHeight={'91vh'} color={colors.white} p={2}>
+    <Box height={'90vh'} color={colors.white} p={2} display={'flex'} justifyContent={'center'} alignItems={'center'}>
       <Box >
         <Stack direction={{ md: 'column', lg: 'row' }} width={'100%'} >
-          <Box sx={{ width: { md: '100%', lg: '60%' },  overflow: 'hidden' }}>
+          <Box sx={{ width: { md: '100%', lg: '65%' }, overflow: 'hidden' }}>
             <ReactPlayer
               style={{ borderRadius: '100px' }}
               url={`https://www.youtube.com/watch?v=${id}`}
@@ -38,7 +38,7 @@ const VideoDetail = () => {
             />
           </Box>
 
-          <Stack sx={{ gap: '20px', width: { md: '100%', lg: '40%' }, overflowY: 'auto' }} p={{ md: 0, lg: 4 }} mt={{ xs: 2 }}>
+          <Stack sx={{ gap: '20px', width: { md: '100%', lg: '35%' }, height: '80vh', overflowY: 'scroll' }} p={{ md: 0, lg: 4 }} mt={{ xs: 2 }}>
 
             <Typography variant='h5' fontWeight='bold' >
               {title}
@@ -67,9 +67,9 @@ const VideoDetail = () => {
                     alt={videoDetail.snippet.channelTitle}
                     src={videoDetail.snippet.thumbnails.default.url}
                   />
-                  <Typography variant='subtitle2' color='gray'>
+                  <Typography variant='subtitle2' color={colors.gray}>
                     {channelTitle}
-                    <CheckCircle sx={{ fontSize: '12px', color: 'gray', ml: '5px' }} />
+                    <CheckCircle sx={{ fontSize: '12px', color: colors.gray, ml: '5px' }} />
                   </Typography>
                 </Stack>
               </Link>
