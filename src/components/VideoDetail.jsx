@@ -26,7 +26,7 @@ const VideoDetail = () => {
   const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;
 
   return (
-    <Box height={'90vh'} color={colors.white} p={2} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+    <Box height={'90vh'} mt={'10vh'} color={colors.white} p={2} display={'flex'} justifyContent={'center'} alignItems={'center'}>
       <Box >
         <Stack direction={{ md: 'column', lg: 'row' }} width={'100%'} >
           <Box sx={{ width: { md: '100%', lg: '65%' }, overflow: 'hidden' }}>
