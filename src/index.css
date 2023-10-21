@@ -26,7 +26,7 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
+  background-color: #1E1E1E !important;
   color: white !important;
 }
 
@@ -56,16 +56,12 @@ a {
   border: none;
 
   padding: 7px 15px;
-  margin: 10px 0px;
-  border-radius: 20px;
+  /* border-radius: .5rem; */
   transition: all 0.3s ease;
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width: 900px) {
-  .category-btn{
-    margin: 10px;
-  }
-}
+
 
 @media screen and (max-width:800px){
   .copyright{
